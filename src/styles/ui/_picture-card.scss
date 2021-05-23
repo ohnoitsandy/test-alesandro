@@ -1,0 +1,39 @@
+@import "../global/color";
+
+.picture-card {
+  padding: 1.25rem;
+}
+
+.picture-card:hover {
+  box-shadow: 0 0 10px 6px #eaeaea;
+}
+
+.picture-card__img {
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.picture-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picture-card-info__title {
+  font-size: 1rem;
+  h5 {
+    margin: 0.625rem 0.625rem 0;
+  }
+}
+
+.picture-card-info__icon {
+  color: $third-color;
+  cursor: pointer;
+}
+
+.picture-card-info__icon.liked {
+  color: $primary-color;
+}

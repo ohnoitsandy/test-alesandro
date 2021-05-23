@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
+import "./assets/vendors/style"
 import MainApp from "./app/index";
 
 class App extends React.Component {

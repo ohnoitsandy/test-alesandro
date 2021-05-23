@@ -1,0 +1,15 @@
+.picture-card-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.picture-card-list__item {
+  transition: transform 0.2s;
+  width: 23%;
+  margin-bottom: 1rem;
+}
+
+.picture-card-list__item:hover {
+  transform: scale(1.1);
+}

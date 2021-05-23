@@ -11,11 +11,16 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
-        <React.Fragment>
-          <p>This is an example</p>
-        </React.Fragment>
-      </div>
+      <React.Fragment>
+        <div className="app-header__title">
+          <h1>Our gallery</h1>
+        </div>
+        <div className="app-header__btn">
+          <button>
+            <span>Photos you liked</span>
+          </button>
+        </div>
+      </React.Fragment>
     );
   }
 }

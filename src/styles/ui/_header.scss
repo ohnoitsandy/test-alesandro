@@ -1,0 +1,48 @@
+//IMPORTS
+@import "../global/color";
+/* Header styles
+   ========================================================================== */
+
+.app-header {
+  font-size: 3rem;
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 575px) {
+    font-size: 1.75rem;
+  }
+}
+.app-header__title {
+  display: flex;
+  justify-content: center;
+  h1 {
+    margin: 1rem;
+  }
+}
+
+.app-header__btn {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  button {
+    color: $primary-color;
+    background-color: $secondary-color;
+    box-shadow: 3px 3px 1px 0 #e5e5e5;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 770px) {
+    justify-content: center;
+    button {
+      margin: 1rem;
+    }
+  }
+}
+.app-header__btn button:hover {
+  color: $secondary-color;
+  background-color: $primary-color;
+}
