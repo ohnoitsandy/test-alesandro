@@ -1,6 +1,8 @@
 @import "../global/color";
 
 .picture-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem;
 }
 
@@ -25,13 +27,14 @@
 .picture-card-info__title {
   font-size: 1rem;
   h5 {
-    margin: 0.625rem 0.625rem 0;
+    margin: 0.625rem 0 0;
   }
 }
 
 .picture-card-info__icon {
   color: $third-color;
   cursor: pointer;
+  margin: 0.625rem 0 0;
 }
 
 .picture-card-info__icon.liked {
