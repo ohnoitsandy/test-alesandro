@@ -1,0 +1,41 @@
+//IMPORTS
+@import "../global/color";
+/* Header styles
+   ========================================================================== */
+
+.app-footer {
+  display: flex;
+  position: fixed;
+  height: auto;
+  background-color: #454545;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+
+.app-footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
+  h5 {
+    font-size: 1rem;
+    color: white;
+    margin: 0.3rem;
+  }
+  @media screen and (max-width: 575px) {
+    text-align: center;
+    .app-footer {
+      height: 100px !important;
+    }
+    .app-footer__item {
+      width: 100%;
+    }
+  }
+}

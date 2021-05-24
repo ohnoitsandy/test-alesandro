@@ -1,0 +1,11 @@
+@import "variables";
+
+body {
+  font: {
+    family: $font-family-base;
+    size: $font-size-base;
+    weight: $font-weight-base;
+  }
+  height: 100%;
+  overflow: hidden;
+}

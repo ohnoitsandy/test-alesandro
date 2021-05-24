@@ -1,0 +1,25 @@
+//IMPORTS
+@import "../global/color";
+/* Header styles
+   ========================================================================== */
+
+.app-header {
+  padding: 1rem;
+  font-size: 3rem;
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 575px) {
+    font-size: 1.75rem;
+  }
+}
+.app-header__title {
+  display: flex;
+  justify-content: center;
+  h1 {
+    margin: 1rem;
+  }
+}
+
