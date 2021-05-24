@@ -7,7 +7,6 @@ const INIT_STATE = {
 };
 
 export default (state = INIT_STATE, action) => {
-  console.log(state);
   switch (action.type) {
     case TOGGLE_LIKE: {
       return {

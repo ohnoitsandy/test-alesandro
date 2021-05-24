@@ -23,6 +23,12 @@ class PictureCardList extends React.Component {
     });
   };
 
+  clickHandler = (item) => {
+    const { pictureClickHandler, currenPhotoHandler } = this.props;
+    pictureClickHandler();
+    currenPhotoHandler(item);
+  };
+
   render() {
     const { list, likeHandler } = this.props,
       { liked } = this.state;
@@ -37,7 +43,10 @@ class PictureCardList extends React.Component {
         <div className="picture-card-list">
           {filteredList.map((item) => {
             return (
-              <div className="picture-card-list__item">
+              <div
+                onClick={() => this.clickHandler(item)}
+                className="picture-card-list__item"
+              >
                 <PictureCard likeHandler={likeHandler} item={item} />
               </div>
             );

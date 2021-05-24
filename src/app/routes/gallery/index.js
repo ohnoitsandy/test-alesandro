@@ -7,6 +7,11 @@ import ImageModal from "../../../components/ImageModal";
 //TOOLS
 
 class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showLiked: false, showModal: false, currentPhoto: {} };
+  }
+
   toggleLikeHandler(item, value) {
     const { cities } = this.props,
       likedPhotos = cities.map((city) => {
@@ -20,32 +25,40 @@ class Gallery extends React.Component {
       });
     this.props.toggleLike(likedPhotos);
   }
-  /*
-  toggleShowPictureHandler(item, value) {
-    const { cities } = this.props
 
+  pictureClickHandler = () => {
+    this.setState((prevState) => {
+      return { showModal: !prevState.showModal };
+    });
+  };
 
-    this.props.toggleLike(likedPhotos);
-  }*/
-
-  constructor(props) {
-    super(props);
-    this.state = { showLiked: false };
-  }
+  currentPhotoHandler = (item) => {
+    this.setState({ currentPhoto: item });
+  };
 
   render() {
-    const { cities, likedPhotos } = this.props,
-      { showLiked } = this.state;
+    const { cities } = this.props,
+      { showModal, currentPhoto } = this.state;
     return (
       <React.Fragment>
         <div className="app-wrapper">
           <div className="gallery-content">
             <PictureCardList
               likeHandler={this.toggleLikeHandler.bind(this)}
-              list={showLiked ? likedPhotos : cities}
+              pictureClickHandler={this.pictureClickHandler}
+              currenPhotoHandler={this.currentPhotoHandler}
+              list={cities}
             />
           </div>
-          <ImageModal showModal={true} />
+          {showModal && (
+            <ImageModal
+              showModal={showModal}
+              likeHandler={this.toggleLikeHandler.bind(this)}
+              pictureClickHandler={this.pictureClickHandler}
+              currenPhotoHandler={this.currentPhotoHandler}
+              item={currentPhoto}
+            />
+          )}
         </div>
       </React.Fragment>
     );

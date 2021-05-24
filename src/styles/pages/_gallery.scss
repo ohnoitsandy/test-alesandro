@@ -1,6 +1,9 @@
 
 .gallery-content {
   max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
