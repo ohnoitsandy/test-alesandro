@@ -1,8 +1,9 @@
-import { TOGGLE_LIKE } from "../constants/actionTypes";
+import { TOGGLE_LIKE, TOGGLE_PHOTOS } from "../constants/actionTypes";
 import { cities } from "../constants/cities";
 
 const INIT_STATE = {
   cities,
+  likedPhotos: [],
 };
 
 export default (state = INIT_STATE, action) => {
@@ -12,6 +13,12 @@ export default (state = INIT_STATE, action) => {
       return {
         ...state,
         cities: action.cities,
+      };
+    }
+    case TOGGLE_PHOTOS: {
+      return {
+        ...state,
+        likedPhotos: action.likedPhotos,
       };
     }
     default:

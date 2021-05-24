@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 600px;
+  padding: 2rem;
 }
 
 .picture-card-list__item {
@@ -15,4 +19,33 @@
 
 .picture-card-list__item:hover {
   transform: scale(1.1);
+}
+
+.picture-card-list__btn {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 1rem;
+  button {
+    color: $primary-color;
+    background-color: $secondary-color;
+    box-shadow: 3px 3px 1px 0 #e5e5e5;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 770px) {
+    justify-content: center;
+    button {
+      margin: 1rem;
+    }
+  }
+}
+.picture-card-list__btn.active button {
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+.picture-card-list__btn button:hover {
+  color: $secondary-color;
+  background-color: $primary-color;
 }

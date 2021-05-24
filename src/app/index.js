@@ -1,6 +1,7 @@
 //IMPORTS
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Route, Switch } from "react-router-dom";
 import Gallery from "./routes/gallery";
 
@@ -26,6 +27,9 @@ class MainApp extends React.Component {
               <Route path={`${match.url}/gallery`} component={Gallery} />
             </Switch>
           </div>
+        </div>
+        <div className="app-footer">
+          <Footer />
         </div>
       </div>
     );

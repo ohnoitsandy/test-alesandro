@@ -11,6 +11,8 @@
 .app-wrapper {
   height: 100%;
   padding: 30px;
+  display: flex;
+  position: relative;
   @media screen and (max-width: 575px) {
     padding: 20px;
   }

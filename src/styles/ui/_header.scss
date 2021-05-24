@@ -23,27 +23,3 @@
   }
 }
 
-.app-header__btn {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  button {
-    color: $primary-color;
-    background-color: $secondary-color;
-    box-shadow: 3px 3px 1px 0 #e5e5e5;
-    border: 1px solid $primary-color;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  @media screen and (max-width: 770px) {
-    justify-content: center;
-    button {
-      margin: 1rem;
-    }
-  }
-}
-.app-header__btn button:hover {
-  color: $secondary-color;
-  background-color: $primary-color;
-}
